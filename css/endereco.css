@@ -1,0 +1,107 @@
+@import url('config.css');
+
+.endereco {
+  background-color: white;
+}
+
+.endereco .container {
+  display: flex;
+  gap: 50px;
+}
+
+.endereco-info {
+  flex: 1;
+}
+
+.endereco-info h2 {
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.endereco-info h2::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  bottom: -10px;
+  left: 0;
+}
+
+.endereco-info p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: var(--gray-dark);
+  display: flex;
+  align-items: center;
+}
+
+.endereco-info i {
+  margin-right: 10px;
+  color: var(--secondary-color);
+  width: 20px;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.social-link {
+  display: grid; 
+  place-items: center; 
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white; 
+  font-size: 2rem; 
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link i {
+  color: inherit;
+}
+
+.social-link .fa-whatsapp { transform: translateX(1px); }
+.social-link .fa-instagram { transform: translateY(-1px); }
+.social-link .fa-facebook-f { transform: translateX(-1px); }
+
+.social-link:hover {
+ background-color: var(--secondary-color);
+  transform: translateY(-3px) scale(1.05);
+  color: white;
+}
+
+.mapa {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+  .endereco .container {
+    flex-direction: column;
+  }
+  
+  .mapa {
+    order: -1;
+  }
+  
+  .endereco-info h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .endereco-info p {
+    font-size: 1rem;
+  }
+}
